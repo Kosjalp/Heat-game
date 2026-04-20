@@ -54,19 +54,19 @@ while True:
         print("")
     print("")
     print("Appuyez sur entrée↵ pour continuer")
-    input("Tu te retrouves dans le desert.")
-    input("Tu dois survivre dans cette chaleur.")
-    input("Si ton eau ou ton énergie atteint zéro, tu perds.")
-    input("Si ta température devient 42° ou plus, tu perds.")
+    input("Vous vous retrouvez dans le desert.")
+    input("Vous devez survivre dans cette chaleur.")
+    input("Si votre eau ou votre énergie atteint zéro, vous perdez.")
+    input("Si votre température atteint 42° ou plus, vous perdez.")
     print("")
-    input("Chaque jour, tu peut soit: \n" \
-    "1) Rester à l'ombre, qui descends ta température et ton eau et monte ton énergie, \n" \
-    "2) Chercher pour de l'eau, qui a une chance de monter ton eau et de decendre ta température, mais decends ton énergie et monte ta température, ou \n" \
-    "3) Chercher quelque part plus froid, qui à une chance de réinitialiser ta température à 37°C, ou de decendre ton énergie par 25. \n")
+    input("Chaque jour, vous pouvez soit: \n" \
+    "1) Rester à l'ombre, qui descend ta température et ton eau et monte ton énergie, \n" \
+    "2) Chercher de l'eau, qui a une chance de monter votre eau et de decendre votre température, mais decends votre énergie et monte votre température, ou \n" \
+    "3) Chercher un endroit plus froid, qui à une chance de réinitialiser votre température à 37°C, ou de decendre votre énergie par 25. \n")
     print("")
-    input("Chaque quelque jours, la consommation de l'eau monte.")
-    input("Tu dois survivre 25 jours.")
-    input("Bon chance!")
+    input("Tous les quelque jours, la consommation de l'eau monte.")
+    input("Vous devez survivre 25 jours.")
+    input("Bonne chance!")
     print("...")
     time.sleep(1)
     for i in range(100):
@@ -76,10 +76,10 @@ while True:
         print(f"Jour {day}:")
         print("")
         print(f"Eau: {water} Énergie: {energy} Température: {temp}°")
-        print("Qu'est-ce que tu fais?")
-        choice = input("Mets 1 pour rester à l'ombre, 2 pour chercher pour de l'eau, ou 3 pour chercher quelque part plus froid, puis appuyez sur entrée. ")
+        print("Qu'est-ce que vous faites?")
+        choice = input("Mettez 1 pour rester à l'ombre, 2 pour chercher de l'eau, ou 3 pour chercher quelque part plus froid, puis appuyez sur entrée. ")
         if choice == "1":
-            input("Tu as choisi de rester à l'ombre.")
+            input("Vous avez choisi de rester à l'ombre.")
             temp -= random.randrange(1, 2)
             energy += random.randrange(8, 16)
             water -= (avg_temp / 20 / 2 + avg_temp/temp)*4+random.randrange(1, 2)
@@ -87,7 +87,7 @@ while True:
             if isDead == True:
                 break
         elif choice == "2":
-            input("Tu as choisi de chercher pour de l'eau.")
+            input("Vous avez choisi de chercher pour de l'eau.")
             temp += random.randrange(1, 2)
             energy -= random.randrange(9, 11)
             if random.randrange(1, 5) == 1:
@@ -99,7 +99,7 @@ while True:
             if isDead == True:
                 break
         elif choice == "3":
-            input("Tu as choisi de chercher pour quelque part plus froid.")
+            input("Vous avez choisi de chercher pour quelque part plus froid.")
             water -= (avg_temp / 20 / 2 + avg_temp/temp)*5
             energy -= 14
             if random.randrange(1, 4) == 1:
@@ -112,6 +112,7 @@ while True:
         elif choice == "test.win":
             day = 25
         else:
+            print("")
             print("Je n'ai pas compris. Réssayez. ")
             print("")
         if day == 25:
