@@ -50,7 +50,7 @@ while True:
     avg_temp = 35
     isDead = False
     #Intro
-    for i in range(100):
+    for i in range(100): 
         print("")
     print("")
     print("Appuyez sur entrée↵ pour continuer")
@@ -111,6 +111,10 @@ while True:
                 break
         elif choice == "test.win":
             day = 25
+        elif choice == "reset":
+            for i in range(100):
+                print("")
+            break
         else:
             print("")
             print("Je n'ai pas compris. Réssayez. ")
